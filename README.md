@@ -1,3 +1,4 @@
+# pls tell me if you runinto any problems and if you do you are free to fix it your self
 # Windows Debloat Toolkit (Pulse Edition)
 
 A safe, stable, and fully restorable Windows debloat toolkit using **ChristTitus Safe Style (Appx‑only)** removal.  
