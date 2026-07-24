@@ -1,2 +1,207 @@
-# wndows-debloat
-this is a windows debloat made by me and theres 3 versons
+===========================================================
+                WINDOWS DEBLOAT TOOLKIT (README)
+===========================================================
+
+This toolkit contains three .bat scripts designed to safely
+debloat Windows without breaking the system. All scripts use
+SAFE Titus-style Appx-only removal, meaning:
+
+- No system components are removed
+- No hardware drivers are touched
+- No Start Menu or Taskbar breakage
+- No Windows features are damaged
+- Everything can be fully restored
+
+The toolkit includes:
+
+1. Gamer Debloater
+2. Normal Debloater
+3. Restore Everything
+
+All scripts include:
+- Admin check
+- Restore point creation FIRST
+- No errors shown to the user
+- Copilot disabled (Windows 11 only)
+- Notepad protected
+- Edge kept
+- Optional OneDrive removal prompt at the end
+
+===========================================================
+1. GAMER DEBLOATER
+===========================================================
+
+Purpose:
+- Debloat Windows while keeping all gaming-related features.
+- Keeps Xbox apps, Game Bar, Gaming Services, Clipchamp, Edge,
+  Notepad, and all system components.
+
+Removes (Appx-only):
+- 3D Viewer
+- Mixed Reality Portal
+- Paint 3D
+- People
+- Skype
+- OfficeHub
+- Solitaire
+- FeedbackHub
+
+Keeps:
+- Xbox apps
+- Game Bar
+- Gaming Services
+- Clipchamp
+- Notepad
+- Edge
+- All system frameworks
+
+Other actions:
+- Disables ads and suggestions
+- Disables telemetry tasks
+- Disables Copilot
+- Creates restore point first
+- Shows no errors
+- Asks user at the end:
+      "Remove OneDrive? (Y/N)"
+    Y = OneDrive removed
+    N = OneDrive stays enabled
+
+Safety:
+- 100% safe for Start Menu, Taskbar, Search, Settings, Explorer
+- Fully restorable using the Restore Everything script
+
+===========================================================
+2. NORMAL DEBLOATER
+===========================================================
+
+Purpose:
+- More aggressive debloat for non-gamers.
+- Removes most consumer apps while keeping Windows stable.
+
+Removes (Appx-only):
+- Everything in Gamer Debloater PLUS:
+  - Cortana
+  - Windows Maps
+  - Weather
+  - Alarms
+  - Camera
+  - Mail & Calendar (windowscommunicationsapps)
+  - Xbox apps
+  - GamingApp
+
+Keeps:
+- Edge
+- Notepad
+- All system components
+- All Windows frameworks
+
+Other actions:
+- Disables ads and suggestions
+- Disables telemetry tasks
+- Disables Copilot
+- Creates restore point first
+- Shows no errors
+- Asks user at the end:
+      "Remove OneDrive? (Y/N)"
+    Y = OneDrive removed
+    N = OneDrive stays enabled
+
+Safety:
+- 100% safe for Start Menu, Taskbar, Search, Settings, Explorer
+- Fully restorable using the Restore Everything script
+
+===========================================================
+3. RESTORE EVERYTHING
+===========================================================
+
+Purpose:
+- Fully restore all Appx packages removed by the debloaters.
+- Re-enable Windows features and undo debloat changes.
+
+Actions:
+- Creates restore point first
+- Re-registers all Appx packages for all users
+- Re-enables ads/sync notifications
+- Re-enables telemetry tasks
+- Re-enables Copilot
+- Re-installs OneDrive
+- Shows no errors
+
+Limitations:
+- Can restore everything removed by Appx-only debloat
+- Cannot restore apps removed via ProvisionedPackage removal
+  (but this toolkit does NOT use that method)
+
+Safety:
+- 100% safe
+- Fully compatible with both debloaters
+
+===========================================================
+4. WHY THIS TOOLKIT IS SAFE
+===========================================================
+
+This toolkit uses SAFE Titus-style debloating:
+
+- Only AppxPackage (per-user apps) are removed
+- ProvisionedPackages are NOT removed
+- System frameworks are NOT removed
+- ShellExperienceHost is NOT touched
+- StartMenuExperienceHost is NOT touched
+- EdgeWebView2 is NOT touched
+- Microsoft.UI.Xaml is NOT touched
+- Windows Search framework is NOT touched
+- Drivers and hardware services are NOT touched
+
+This ensures:
+- Start Menu works
+- Taskbar works
+- Settings app works
+- Search works
+- Explorer works
+- Windows boots normally
+- Hardware works normally
+- Restore script can fix everything
+
+===========================================================
+5. ONEDRIVE BEHAVIOR
+===========================================================
+
+At the end of each debloater, the user is asked:
+
+    Remove OneDrive? (Y/N):
+
+Y = OneDrive is removed safely
+N = OneDrive stays fully enabled
+
+This gives users full control without forcing removal.
+
+===========================================================
+6. COPILOT BEHAVIOR
+===========================================================
+
+Copilot is disabled using a safe registry flag:
+
+    TurnOffWindowsCopilot = 1
+
+This does NOT remove any system components and is fully
+reversible by the Restore Everything script.
+
+===========================================================
+7. NOTEPAD PROTECTION
+===========================================================
+
+Notepad (Microsoft.Windows.Notepad) is always kept.
+
+It is never removed or modified.
+
+===========================================================
+8. EDGE PROTECTION
+===========================================================
+
+Microsoft Edge is always kept.
+
+It is never removed or disabled.
+
+===========================================================
+END OF README
+===========================================================
